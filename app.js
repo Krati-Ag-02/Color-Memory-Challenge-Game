@@ -69,7 +69,7 @@ function checkseq(idx){
 
 
 let allbtn=document.querySelectorAll(".btn"); 
-for(btn of allbtn){
+for(let btn of allbtn){
     btn.addEventListener("click",btnpress);
 }
 
@@ -78,4 +78,27 @@ function reset(){
     userseq=[];
     gameseq=[];
     level=0;
+}
+
+
+// Get the modal, button, and close button
+let modal = document.getElementById("rules-modal");
+let btn = document.getElementById("rules-btn");
+let closeBtn = document.getElementsByClassName("close-btn")[0];
+
+// Open the modal when the user clicks on the "Game Rules" button
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Close the modal when the user clicks the "X" button
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close the modal if the user clicks outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
