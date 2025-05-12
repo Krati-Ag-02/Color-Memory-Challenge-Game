@@ -1,0 +1,81 @@
+/* General Styling */
+body {
+    text-align: center;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 2rem;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Button Styling */
+.btn {
+    height: 20vmin;
+    width: 20vmin;
+    margin: 2vmin;
+    border: 1vmin solid black;
+    border-radius: 20%;
+    transition: 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Colors */
+.red {
+    background-color: rgb(209, 86, 86);
+}
+.pink {
+    background-color: rgb(133, 23, 42);
+}
+.yellow {
+    background-color: rgb(195, 129, 31);
+}
+.blue {
+    background-color: rgb(11, 124, 125);
+}
+
+/* Flash effect */
+.flash {
+    background-color: white !important;
+    box-shadow: 0 0 20px white;
+    transition: background-color 0.1s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .btn {
+        height: 40vmin;
+        width: 40vmin;
+        margin: 2vmin;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
