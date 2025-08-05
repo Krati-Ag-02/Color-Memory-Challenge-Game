@@ -12,12 +12,11 @@ A web-based implementation of the classic Simon memory game. Built using HTML, C
 - CSS
 - JavaScript
 
-## Demo
-[Live Demo Link (if hosted)]
+
 
 ## How to Play
 1. Press any key to start.
 2. Watch the color sequence.
 3. Repeat the pattern in order.
 4. Sequence gets longer each round — test your memory!
-# simon-game
+
