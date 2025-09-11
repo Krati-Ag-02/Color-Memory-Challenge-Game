@@ -1,41 +1,4 @@
-// ------------- Particle Background -----------------
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
-let particles = [];
-const colors = ["#ff4d4d","#4d4dff","#ff4da6","#ffff4d","#4dff4d","#ffb84d","#9b4dff","#4dffff"];
-function initParticles(){
-    particles = [];
-    for(let i=0;i<200;i++){
-        particles.push({
-            x: Math.random()*canvas.width,
-            y: Math.random()*canvas.height,
-            radius: Math.random()*2+1,
-            dx: (Math.random()-0.5)*0.5,
-            dy: (Math.random()-0.5)*0.5,
-            color: colors[Math.floor(Math.random()*colors.length)]
-        });
-    }
-}
-function animateParticles(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particles.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
-        ctx.fillStyle = p.color;
-        ctx.fill();
-        p.x += p.dx; p.y += p.dy;
-        if(p.x<0||p.x>canvas.width) p.dx*=-1;
-        if(p.y<0||p.y>canvas.height) p.dy*=-1;
-    });
-    requestAnimationFrame(animateParticles);
-}
-initParticles(); animateParticles();
-window.addEventListener('resize', ()=>{ canvas.width=window.innerWidth; canvas.height=window.innerHeight; initParticles(); });
-
-// ------------- Simon Game Logic -----------------
 let userSeq=[], gameSeq=[], level=0, started=false, difficulty=800;
 const btns = ["red","blue","pink","yellow","green","orange","purple","cyan"];
 const levelTitle = document.getElementById("level-title");
@@ -99,3 +62,4 @@ const closeBtn = document.querySelector(".close-btn");
 rulesBtn.onclick = ()=> rulesModal.style.display="flex";
 closeBtn.onclick = ()=> rulesModal.style.display="none";
 window.onclick = e=>{ if(e.target===rulesModal) rulesModal.style.display="none"; }
+
