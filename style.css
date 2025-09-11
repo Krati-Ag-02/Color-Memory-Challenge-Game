@@ -1,4 +1,4 @@
-/* Body & Particle Canvas */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -45,3 +45,4 @@ header h2 { color: #ddd; font-size:1.5rem; }
 .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color: rgba(0,0,0,0.6); justify-content:center; align-items:center; }
 .modal-content { background:#fff; padding:20px; border-radius:10px; max-width:500px; text-align:left; position:relative; }
 .close-btn { position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer; }
+
