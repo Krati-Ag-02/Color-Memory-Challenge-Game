@@ -1,4 +1,4 @@
-# Simon Game 🎮
+# Color Memory Challenge Game 
 
 A web-based implementation of the classic Simon memory game. Built using HTML, CSS, and JavaScript to test and improve user memory through pattern recognition.
 
