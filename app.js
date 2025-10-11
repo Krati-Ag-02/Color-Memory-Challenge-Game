@@ -3,7 +3,7 @@ let userSeq=[], gameSeq=[], level=0, started=false, difficulty=800;
 const btns = ["red","blue","pink","yellow","green","orange","purple","cyan"];
 const levelTitle = document.getElementById("level-title");
 const highScoreDisplay = document.getElementById("high-score");
-let highestScore = localStorage.getItem("simonHighScore") || 0;
+let highestScore = localStorage.getItem("HighScore") || 0;
 highScoreDisplay.textContent = highestScore;
 
 const allBtns = document.querySelectorAll(".btn");
@@ -62,4 +62,5 @@ const closeBtn = document.querySelector(".close-btn");
 rulesBtn.onclick = ()=> rulesModal.style.display="flex";
 closeBtn.onclick = ()=> rulesModal.style.display="none";
 window.onclick = e=>{ if(e.target===rulesModal) rulesModal.style.display="none"; }
+
 
