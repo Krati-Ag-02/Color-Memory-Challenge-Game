@@ -47,7 +47,7 @@ function checkAnswer(idx){
         setTimeout(()=> document.body.style.background = "#1e3c72", 300);
         if(level-1 > highestScore){
             highestScore = level-1;
-            localStorage.setItem("simonHighScore", highestScore);
+            localStorage.setItem("HighScore", highestScore);
             highScoreDisplay.textContent = highestScore;
         }
         levelTitle.innerHTML = `Game Over!<br>Score: ${level-1}<br>Press any key to restart`;
@@ -62,5 +62,6 @@ const closeBtn = document.querySelector(".close-btn");
 rulesBtn.onclick = ()=> rulesModal.style.display="flex";
 closeBtn.onclick = ()=> rulesModal.style.display="none";
 window.onclick = e=>{ if(e.target===rulesModal) rulesModal.style.display="none"; }
+
 
 
